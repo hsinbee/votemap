@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Noto+Sans+TC:wght@100;300;800;900&family=Rampart+One&display=swap');
+
+//   font-family: 'Koulen', sans-serif;
+//   font-family: 'Noto Sans TC', sans-serif;
+//   font-family: 'Rampart One', sans-serif;
+
+
+
+$h1 : 50px;
+$h2 : 50px;
+$h3 : 32px;
+$h4 : 24px;
+$body : 18px;
+$label: 16px;
+$label_title : 18px;
+$label_body : 18px;
+$btn-font : 18px;
+$sm-font : 14px;
+
+
+
+
+h1 {
+
+    font-size: $h1;
+    line-height: 70.5px;
+    letter-spacing: 3%;
+    font-weight: 800;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+h2 {
+
+    font-size: $h2;
+    line-height: 56px;
+    font-weight: 800;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+h3 {
+
+    font-size: $h3;
+    font-weight: 520;
+    line-height: 36px;
+}
+
+h4 {
+
+    font-size: $h4 ;
+    font-weight: 520;
+    line-height: 28px;
+}
+
+.label_body {
+
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+
+}
+
+.button_check {
+    width: 379px;
+    height: 112px;    
+    background-color: #ffffff;
+    color: map-get($accent_color, accent_color2);
+    font-size: $h1;
+    font-weight: 900;
+    border-radius: 30px;
+    border: 5px solid map-get($accent_color, accent_color2);
+    box-shadow: 9px 8px 0px 0px #6c96ca94;
+    cursor: pointer;
+   
+
+}
