@@ -1,8 +1,11 @@
 <script setup>
-import HelloWorld from '../components/HelloWorld.vue'
+import { ref } from "vue";
+
 </script>
 
 <template>
+
+
 <p>123456</p>
 <router-link to="/3211">3211</router-link>
 
@@ -10,5 +13,9 @@ import HelloWorld from '../components/HelloWorld.vue'
 </template>
 
 <style scoped>
+
+body{
+    background-color: aqua;
+}
 
 </style>

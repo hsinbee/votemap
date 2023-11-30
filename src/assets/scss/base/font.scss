@@ -42,6 +42,7 @@ h3 {
     font-size: $h3;
     font-weight: 520;
     line-height: 36px;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 h4 {
@@ -49,6 +50,7 @@ h4 {
     font-size: $h4 ;
     font-weight: 520;
     line-height: 28px;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .label_body {
@@ -62,8 +64,9 @@ h4 {
 }
 
 .button_check {
+
     width: 379px;
-    height: 112px;    
+    height: 100px;
     background-color: #ffffff;
     color: map-get($accent_color, accent_color2);
     font-size: $h1;
@@ -72,6 +75,6 @@ h4 {
     border: 5px solid map-get($accent_color, accent_color2);
     box-shadow: 9px 8px 0px 0px #6c96ca94;
     cursor: pointer;
-   
+
 
 }

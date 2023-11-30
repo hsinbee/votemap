@@ -2,6 +2,8 @@
 // import { useMyStore } from "../stores/pinia.js";
 // useMyStore().increment();
 
+// import Loading from "../components/Loading.vue";
+
 import { ref } from "vue";
 const voteList = ref([
   {
@@ -53,12 +55,14 @@ const voteList = ref([
 </script>
 
 <template>
-  <div class="enter_container">
+  <!-- <Loading/> -->
 
+  <div class="enter_container">
     <div class="enter_title">
       <img src="../assets/images/logo/circle_bear_logo.png" alt="circle_bear_logo" />
-      <h2>台灣歷屆總統選舉 即時開票地圖</h2>
+      <h2 class="h2">台灣歷屆總統選舉 即時開票地圖</h2>
     </div>
+
     <p>2008 ~ 2020</p>
 
     <div class="card_container">
@@ -75,7 +79,7 @@ const voteList = ref([
 
           <div class="card_name label_body">{{ i.President }}</div>
 
-          <span class="card_footer" :class="`bgcolor_${index}`">1</span>
+          <span class="card_footer" :class="`bgcolor_${index}`"></span>
         </a>
       </div>
     </div>
@@ -84,13 +88,7 @@ const voteList = ref([
       <button class="button_check h1" @click="">查看</button>
     </router-link>
 
-    <img src="../assets/images/design_material/finger-removebg-preview.png
-  
-    " alt="" />
-
-
-
- 
+    <img src="../assets/images/design_material/noword_finger_removeeeeee.png" alt="" />
   </div>
 </template>
 
@@ -101,74 +99,90 @@ const voteList = ref([
 @import "@/assets/scss/base/font.scss";
 
 * {
-  outline: 1px solid#DFF1FF;
+  outline: 1px solid#215d8b;
 
   a {
     text-decoration: none;
   }
 }
 
-.enter_container{
+body {
+  background-color: #244948;
 
-  background-image: url(../assets/images/design_material/homepage_enter_background.png);
-  background-size: cover; /* 覆蓋整個視窗 */
-  background-position: center; /* 圖片在視窗中央對齊 */
-  background-repeat: no-repeat; /* 避免重複顯示 */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-h2 {
-  color: $gray_font_color;
-}
-.enter_title {
-  display: flex;
-}
-p {
-  font-family: "Rampart One";
-}
-.card_container {
-  display: flex;
-  justify-content: center;
-  gap: 51px;
-
-  .card_wrap {
+  .enter_container {
+    background-image: url(../assets/images/design_material/bg_border.png);
+    background-size:100%;
+    // background-position: center; /* 圖片在視窗中央對齊 */
+    background-repeat: no-repeat; /* 避免重複顯示 */
     display: flex;
     flex-direction: column;
-    width: 140px;
-    height: 198px;
+    justify-content:end;
+    align-items: center;
 
-    .card_title {
-      width: 140px;
-      height: 36px;
-      border-radius: 12px 12px 0px 0px;
-      // background: #80cd80;
-      box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
 
-      P {
-        color: #117772;
-        font-family: "Noto Sans TC";
-        font-size: 10px;
-      }
-      img {
-        width: 25px;
-        height: 26.691px;
-      }
-    }
-    .card_name {
-      width: 140px;
-      height: 34px;
+    .enter_title {
       display: flex;
       justify-content: center;
-      align-items: center;
-      background: #fafbff;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+      align-items: center; /* 將內容垂直置中 */
+
+      h2 {
+        color: $gray_font_color;
+      }
     }
-    .card_footer {
-      border-radius: 0px 0px 11px 11px;
-      box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
+    p {
+      font-family: "Rampart One";
+      font-size: 48px;
+      color: $gray_font_color;
+      text-align: center;
+    }
+    .card_container {
+      display: flex;
+      justify-content: center;
+      
+
+      gap: 51px;
+
+      .card_wrap {
+        display: flex;
+        flex-direction: column;
+        width: 140px;
+        height: 198px;
+
+        .card_title {
+          width: 140px;
+          height: 36px;
+          border-radius: 12px 12px 0px 0px;
+          // background: #80cd80;
+          box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
+
+          P {
+            color: #117772;
+            font-family: "Noto Sans TC";
+            font-size: 10px;
+          }
+          img {
+            width: 25px;
+            height: 26.691px;
+          }
+        }
+        .card_name {
+          width: 140px;
+          height: 34px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #000000;
+          background: #fafbff;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+        }
+        .card_footer {
+          display: block;
+          width: 100%;
+          height: 20px;
+          border-radius: 0px 0px 11px 11px;
+          box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
+        }
+      }
     }
   }
 }
