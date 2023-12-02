@@ -59,12 +59,17 @@ const voteList = ref([
   <!-- <Loading/> -->
 
   <div class="enter_container">
+
+
+
+
+
     <div class="enter_title">
       <img src="../assets/images/logo/circle_bear_logo.png" alt="circle_bear_logo" />
       <h2 class="h2">台灣歷屆總統選舉 即時開票地圖</h2>
     </div>
 
-    <p class="enter_year">2008 ~ 2020</p>
+    <p class="enter_year">2008 ~ 2020年</p>
 
     <div class="card_container">
       <img src="../assets/images/Party_emblem/group_b_g_o.png" alt="group_b_g_o" />
@@ -108,34 +113,31 @@ const voteList = ref([
   }
 }
 
-body
- {
-
-
-
+body {
   .enter_container {
-    background-image: url(../assets/images/design_material/bg_border.png);
-    background-size: 100%;
-    // background-position: center; /* 圖片在視窗中央對齊 */
-    background-repeat: no-repeat; /* 避免重複顯示 */
+    background:url(../assets/images/design_material/bg_border.png) ,url(../assets/images/design_material/homepage_bg.png);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content:space-evenly;
     align-items: center;
+    padding: 30px 30px 30px 30px;
 
     .enter_title {
       display: flex;
-      justify-content: center;
-      align-items: center; /* 將內容垂直置中 */
+
 
       h2 {
         color: $gray_font_color;
       }
     }
-    
+
     .card_container {
       display: flex;
-      justify-content: center;
+ 
 
       gap: 51px;
 
@@ -161,31 +163,30 @@ body
             height: 26.691px;
           }
         }
-        .card_name {
-          width: 140px;
-          height: 34px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: #000000;
-          background: #fafbff;
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-        }
-        .card_footer {
-          display: block;
-          width: 100%;
-          height: 20px;
-          border-radius: 0px 0px 11px 11px;
-          box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
-        }
+      }
+
+      .card_name {
+        width: 140px;
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        background: #fafbff;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+      }
+      .card_footer {
+        display: block;
+        width: 100%;
+        height: 20px;
+        border-radius: 0px 0px 11px 11px;
+        box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
       }
     }
-
-
-    .card_container:hover {
-
-    }
   }
+}
+
+.card_container:hover {
 }
 
 .bgcolor_0 {
