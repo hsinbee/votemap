@@ -67,7 +67,7 @@ const voteList = ref([
     <p class="enter_year">2008 ~ 2020年</p>
 
     <div class="card_container">
-      <img src="../assets/images/Party_emblem/group_b_g_o.png" alt="group_b_g_o" />
+      <img src="../assets/images/Party_emblem/bottom_icon_2020_2016.png" alt="group_b_g_o" />
 
       <div class="card_wrap" v-for="(i, index) in voteList">
 
@@ -102,7 +102,7 @@ const voteList = ref([
 @import "@/assets/scss/base/font.scss";
 
 * {
-  outline: 1px solid#215d8b;
+  // outline: 1px solid#215d8b;
 
   a {
     text-decoration: none;

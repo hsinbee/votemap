@@ -93,7 +93,7 @@ const voteList = ref([
 @import "@/assets/scss/base/font.scss";
 
 * {
-  outline: 2px solid#903333;
+  // outline: 2px solid#903333;
   a {
     text-decoration: none;
   }
