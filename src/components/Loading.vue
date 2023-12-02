@@ -21,7 +21,7 @@
   
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 
 @import url("https://fonts.googleapis.com/css2?family=Koulen&family=Noto+Sans+TC:wght@100&display=swap");
 
@@ -33,7 +33,8 @@
 }
 
 body {
-  background: 5590bf;
+
+  background: #5590bf;
   margin: 0;
   padding: 0;
   overflow: hidden;

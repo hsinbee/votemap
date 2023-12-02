@@ -195,13 +195,20 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+.map_wrap {
+  height: 100vh;
 
-.map_wrap{
-    width: 100vh;
-    height:100vh;
- 
+  path {
+    transition: 0.5s;
+    cursor: pointer;
+
+  }
+
+  path:hover {
+    transform: translate(-5px, -5px);
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+
+  }
 }
-
-
 </style>

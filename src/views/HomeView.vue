@@ -8,6 +8,7 @@ import { ref } from "vue";
 const voteList = ref([
   {
     groupimg: "src/assets/images/Party_emblem/g_progressiveparty.png",
+    group: "民主進步黨",
     Presidentimg: "src/assets/images/President/english_chil.jpg",
     President: "蔡英文",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E8%94%A1%E8%8B%B1%E6%96%87",
@@ -63,7 +64,7 @@ const voteList = ref([
       <h2 class="h2">台灣歷屆總統選舉 即時開票地圖</h2>
     </div>
 
-    <p>2008 ~ 2020</p>
+    <p class="enter_year">2008 ~ 2020</p>
 
     <div class="card_container">
       <img src="../assets/images/Party_emblem/group_b_g_o.png" alt="group_b_g_o" />
@@ -73,8 +74,9 @@ const voteList = ref([
           <div class="card_title" :class="`bgcolor_${index}`">
             <img :src="i.groupimg" alt="groupimg" />
 
-            <p>{{ i.group }}</p>
+            <p class="label_body">{{ i.group }}</p>
           </div>
+
           <img :src="i.Presidentimg" alt="Presidentimg" />
 
           <div class="card_name label_body">{{ i.President }}</div>
@@ -106,19 +108,20 @@ const voteList = ref([
   }
 }
 
-body {
-  background-color: #244948;
+body
+ {
+
+
 
   .enter_container {
     background-image: url(../assets/images/design_material/bg_border.png);
-    background-size:100%;
+    background-size: 100%;
     // background-position: center; /* 圖片在視窗中央對齊 */
     background-repeat: no-repeat; /* 避免重複顯示 */
     display: flex;
     flex-direction: column;
-    justify-content:end;
+    justify-content: end;
     align-items: center;
-
 
     .enter_title {
       display: flex;
@@ -129,16 +132,10 @@ body {
         color: $gray_font_color;
       }
     }
-    p {
-      font-family: "Rampart One";
-      font-size: 48px;
-      color: $gray_font_color;
-      text-align: center;
-    }
+    
     .card_container {
       display: flex;
       justify-content: center;
-      
 
       gap: 51px;
 
@@ -149,16 +146,15 @@ body {
         height: 198px;
 
         .card_title {
-          width: 140px;
-          height: 36px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
           border-radius: 12px 12px 0px 0px;
-          // background: #80cd80;
           box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
 
           P {
-            color: #117772;
-            font-family: "Noto Sans TC";
-            font-size: 10px;
+            color: #ffffff;
           }
           img {
             width: 25px;
@@ -183,6 +179,11 @@ body {
           box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
         }
       }
+    }
+
+
+    .card_container:hover {
+
     }
   }
 }

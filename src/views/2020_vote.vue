@@ -1,9 +1,12 @@
 <script setup>
 import { ref } from "vue";
 import Map from "../components/Map.vue";
+import Nav from "../components/Nav.vue";
+
 const voteList = ref([
   {
     groupimg: "src/assets/images/Party_emblem/g_progressiveparty.png",
+    group: "民主進步黨",
     Presidentimg: "src/assets/images/President/english_chil.jpg",
     President: "蔡英文",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E8%94%A1%E8%8B%B1%E6%96%87",
@@ -48,16 +51,19 @@ const voteList = ref([
           <div class="card_container">
             <div class="card_wrap" v-for="(i, index) in voteList">
               <a :href="i.wikipediaLink" target="_blank" rel="noopener noreferrer">
+
                 <div class="card_title" :class="`bgcolor_${index}`">
                   <img :src="i.groupimg" alt="groupimg" />
 
-                  <p>{{ i.group }}</p>
+                  <p class="label_body">{{ i.group }}</p>
                 </div>
+
+
                 <img :src="i.Presidentimg" alt="Presidentimg" />
 
                 <div class="card_name label_body">{{ i.President }}</div>
 
-                <span class="card_footer h4" :class="`bgcolor_${index}`">{{
+                <span class="card_footer label_footer" :class="`bgcolor_${index}`">{{
                   i.getVotes
                 }}</span>
               </a>
@@ -75,17 +81,13 @@ const voteList = ref([
         </div>
       </div>
 
-      <Map />
+      <Map /> <Nav />
     </div>
   </div>
-
-  <li>
-    <router-link to="/3211">3211</router-link>
-  </li>
 </template>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Noto+Sans+TC:wght@100;300;800;900&family=Rampart+One&display=swap");
+
 
 @import "@/assets/scss/base/color.scss";
 @import "@/assets/scss/base/font.scss";
@@ -97,8 +99,8 @@ const voteList = ref([
   }
 
   .web_container {
-    border: 50px solid $background;
-    background-color: $background;
+    border: 50px solid $web_background;
+    background-color: $web_background;
 
     .web_map_container {
       display: flex;
@@ -116,24 +118,20 @@ const voteList = ref([
           gap: 37px;
 
           .card_wrap {
-            width: 140px;
-            height: 198px;
-
             .card_title {
-              width: 140px;
-              height: 36px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 5px;
               border-radius: 12px 12px 0px 0px;
-              // background: #80cd80;
               box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
 
               P {
-                color: #117772;
-                font-family: "Noto Sans TC";
-                font-size: 10px;
+                color: #ffffff;
+    
               }
               img {
                 width: 25px;
-                height: 26.691px;
               }
             }
             .card_name {
@@ -147,11 +145,10 @@ const voteList = ref([
               box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
             }
             .card_footer {
-              display: block;
+              display: flex;
               justify-content: center;
               align-items: center;
-              width: 100%;
-              height: 20px;
+             
               border-radius: 0px 0px 11px 11px;
               color: #ffffff;
               font-size: $h4;
@@ -164,12 +161,14 @@ const voteList = ref([
   }
   .coordinate_wrap {
     display: flex;
+    padding-top: 50px;
 
     ol {
       list-style: none;
 
       li {
-        margin-bottom: 20px;
+       text-align: end;
+        margin-bottom: 30px;
         color: #ffffff;
       }
     }
@@ -177,12 +176,12 @@ const voteList = ref([
 }
 
 .bgcolor_0 {
-  background-color: map-get($second_color, second_color2);
+  background-color: map-get( $primary_color,  primary_color2);
 }
 .bgcolor_1 {
-  background-color: map-get($second_color, second_color1);
+  background-color: map-get( $primary_color,  primary_color1);
 }
 .bgcolor_2 {
-  background-color: map-get($second_color, second_color3);
+  background-color: map-get( $primary_color, primary_color5);
 }
 </style>
