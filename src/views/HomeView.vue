@@ -59,11 +59,6 @@ const voteList = ref([
   <!-- <Loading/> -->
 
   <div class="enter_container">
-
-
-
-
-
     <div class="enter_title">
       <img src="../assets/images/logo/circle_bear_logo.png" alt="circle_bear_logo" />
       <h2 class="h2">台灣歷屆總統選舉 即時開票地圖</h2>
@@ -75,6 +70,7 @@ const voteList = ref([
       <img src="../assets/images/Party_emblem/group_b_g_o.png" alt="group_b_g_o" />
 
       <div class="card_wrap" v-for="(i, index) in voteList">
+
         <a :href="i.wikipediaLink" target="_blank" rel="noopener noreferrer">
           <div class="card_title" :class="`bgcolor_${index}`">
             <img :src="i.groupimg" alt="groupimg" />
@@ -90,13 +86,13 @@ const voteList = ref([
         </a>
       </div>
     </div>
-
-    <router-link to="/2020_vote">
-      <button class="button_check h1" @click="">查看</button>
-    </router-link>
-
-    <img src="../assets/images/design_material/noword_finger_removeeeeee.png" alt="" />
+    <div class="enter_container_foot">
+      <router-link to="/2020_vote">
+        <button class="button_check h1" @click="">查看</button>
+      </router-link>
+    </div>
   </div>
+
 </template>
 
 <style lang="scss" scoped>
@@ -115,20 +111,20 @@ const voteList = ref([
 
 body {
   .enter_container {
-    background:url(../assets/images/design_material/bg_border.png) ,url(../assets/images/design_material/homepage_bg.png);
+    background: url(../assets/images/design_material/bg_border.png),
+      url(../assets/images/design_material/homepage_bg.png);
 
     background-size: cover;
     background-repeat: no-repeat;
 
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: 30px 30px 30px 30px;
+    padding-top: 200px;
 
     .enter_title {
       display: flex;
-
 
       h2 {
         color: $gray_font_color;
@@ -137,7 +133,6 @@ body {
 
     .card_container {
       display: flex;
- 
 
       gap: 51px;
 
@@ -147,46 +142,62 @@ body {
         width: 140px;
         height: 198px;
 
-        .card_title {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 5px;
-          border-radius: 12px 12px 0px 0px;
-          box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
-
-          P {
-            color: #ffffff;
-          }
-          img {
-            width: 25px;
-            height: 26.691px;
-          }
-        }
+        box-shadow: none;
+      }
+      .card_wrap:hover {
+        transition:  transform 0.5s ease;
+        transform: translate(7px);
+        box-shadow: -20px 20px 0px 20px rgba(0,0,0,0.72);
+        border-radius: 7px;
       }
 
-      .card_name {
-        width: 140px;
-        height: 34px;
+      .card_title {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #000000;
-        background: #fafbff;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-      }
-      .card_footer {
-        display: block;
-        width: 100%;
-        height: 20px;
-        border-radius: 0px 0px 11px 11px;
+        gap: 5px;
+        border-radius: 12px 12px 0px 0px;
         box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
+ 
+
+        P {
+          color: #ffffff;
+        }
+        img {
+          width: 25px;
+          height: 26.691px;
+        }
       }
+    }
+
+    .card_name {
+      width: 140px;
+      height: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #000000;
+      background: #fafbff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    }
+    .card_footer {
+      display: block;
+      width: 100%;
+      height: 20px;
+      border-radius: 0px 0px 11px 11px;
+      box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
     }
   }
 }
 
-.card_container:hover {
+.enter_container_foot {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 600px;
+  box-shadow: none;
 }
 
 .bgcolor_0 {

@@ -1,37 +1,30 @@
 <script setup>
 import { ref } from "vue";
-import Map from "../components/Map2020.vue";
+import Map from "../components/Map2008.vue";
 import Nav from "../components/Nav.vue";
 
 const voteList = ref([
-  {
-    groupimg: "src/assets/images/Party_emblem/g_progressiveparty.png",
-    group: "民主進步黨",
-    Presidentimg: "src/assets/images/President/english_chil.jpg",
-    President: "蔡英文",
-    wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E8%94%A1%E8%8B%B1%E6%96%87",
-    getVotes: "57.13%",
-    getVotesnumber: "8,170,231  票",
+
+{
+    groupimg: "src/assets/images/Party_emblem/b_chinesenationalistparty.png",
+    group: "中國國民黨",
+    Presidentimg: "src/assets/images/President/horse_nine.jpg",
+    President: "馬英九",
+    wikipediaLink: "https://zh.wikipedia.org/wiki/%E9%A6%AC%E8%8B%B1%E4%B9%9D",
+    getVotes: "58.44%",
+    getVotesnumber: "7,659,014  票",
   },
 
   {
-    groupimg: "src/assets/images/Party_emblem/b_chinesenationalistparty.png",
-    group: "中國國民黨",
-    Presidentimg: "src/assets/images/President/korea_fissh.jpg",
-    President: "韓國瑜",
-    wikipediaLink: "https://zh.wikipedia.org/wiki/%E9%9F%93%E5%9C%8B%E7%91%9C",
-    getVotes: "38.61%",
-    getVotesnumber: "5,522,119  票",
+    groupimg: "src/assets/images/Party_emblem/g_progressiveparty.png",
+    group: "民主進步黨",
+    Presidentimg: "src/assets/images/President/long_ting.jpg",
+    President: "謝長廷",
+    wikipediaLink: "https://zh.wikipedia.org/wiki/%E8%AC%9D%E9%95%B7%E5%BB%B7",
+    getVotes: "41.55%",
+    getVotesnumber: "5,444,949  票",
   },
-  {
-    groupimg: "src/assets/images/Party_emblem/or_peoplefirstarty.png",
-    group: "親民黨",
-    Presidentimg: "src/assets/images/President/fish_chu.jpg",
-    President: "宋楚瑜",
-    wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E5%AE%8B%E6%A5%9A%E7%91%9C",
-    getVotes: "4.26%",
-    getVotesnumber: "608,590  票",
-  },
+ 
 ]);
 </script>
 
@@ -44,8 +37,8 @@ const voteList = ref([
             <router-link to="/">
               <img src="../assets/images/logo/main_logo.png" alt="main_logo"
             /></router-link>
-            <h3>2020年</h3>
-            <h3>第 15 屆總統開票地圖</h3>
+            <h3>2008年</h3>
+            <h3>第 12 屆總統開票地圖</h3>
           </div>
 
           <div class="card_container">
@@ -72,7 +65,7 @@ const voteList = ref([
         </div>
 
         <div class="coordinate_wrap">
-          <img src="../assets/images/Party_emblem/bottom_icon_2020_2016.png" alt="coordinate" />
+          <img src="../assets/images/Party_emblem/bottom_icon_2008.png" alt="coordinate" />
           <ol>
             <li class="label_body" v-for="(i, index) in voteList">
               {{ i.getVotesnumber }}
@@ -176,12 +169,10 @@ const voteList = ref([
 }
 
 .bgcolor_0 {
-  background-color: map-get( $primary_color,  primary_color2);
-}
-.bgcolor_1 {
   background-color: map-get( $primary_color,  primary_color1);
 }
-.bgcolor_2 {
-  background-color: map-get( $primary_color, primary_color5);
+.bgcolor_1 {
+  background-color: map-get( $primary_color,  primary_color2);
 }
+
 </style>

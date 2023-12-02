@@ -23,6 +23,11 @@ const routes = [
         name: '2012_vote',
         component: () => import('../views/2012_vote.vue'),
     },
+    {
+        path: '/2008_vote',
+        name: '2008_vote',
+        component: () => import('../views/2008_vote.vue'),
+    },
 
 ];
 
