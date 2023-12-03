@@ -70,20 +70,20 @@ h4 {
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px;
+    line-height: 40px;
 
 }
 
 .enter_year {
-        font-family: "Rampart One";
-        font-size: 48px;
-        color: $gray_font_color;
-        text-align: center;
+    font-family: "Rampart One";
+    font-size: 48px;
+    color: $gray_font_color;
+    text-align: center;
 
 }
 
 .button_check {
-;
+
 
     width: 345px;
     height: 100px;
@@ -102,19 +102,29 @@ h4 {
 .button_check:hover {
     transition: transform 0.3s ease;
     transform: translate(7px, 7px);
-    background-color: map-get($accent_color, accent_color2); /* 替换为悬停时的背景颜色 */
-    color: #ffffff; /* 替换为悬停时的文字颜色 */
-    border-color:#fff; /* 替换为悬停时的边框颜色 */
-    box-shadow:none;
-  
+    background-color: map-get($accent_color, accent_color2);
+    color: #ffffff;
+    border-color: #fff;
+    box-shadow: none;
+
 }
 
-.nav-link {
+.nav_link_top,
+.nav_link_bottom {
+    width: 100%;
+    display: inline-block;
     text-decoration: none;
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 800;
+    line-height: 30px;
     color: map-get($accent_color, accent_color2);
 
 
+
+}
+
+
+.nav_link_bottom {
+    text-align: right;
 
 }

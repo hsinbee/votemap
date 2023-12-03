@@ -24,7 +24,7 @@ const voteList = ref([
     getVotesnumber: "6,093,578  票",
   },
   {
-    groupimg: "",
+    groupimg: "src/assets/images/Party_emblem/no_partymembership.png",
     group: "無黨籍",
     Presidentimg: "src/assets/images/President/fish_chu.jpg",
     President: "宋楚瑜",
@@ -49,28 +49,33 @@ const voteList = ref([
           </div>
 
           <div class="card_container">
-            <div class="card_wrap" v-for="(i, index) in voteList">
-              <a :href="i.wikipediaLink" target="_blank" rel="noopener noreferrer">
-                <div class="card_title" :class="`bgcolor_${index}`">
-                  <img :src="i.groupimg" alt="groupimg" />
+            <div v-for="(i, index) in voteList" :class="`card_hvoer_bg${index}`">
+              <div class="card_wrap">
+                <a :href="i.wikipediaLink" target="_blank" rel="noopener noreferrer">
+                  <div class="card_title" :class="`bgcolor_${index}`">
+                    <img :src="i.groupimg" alt="groupimg" />
 
-                  <p class="label_body">{{ i.group }}</p>
-                </div>
+                    <p class="label_body">{{ i.group }}</p>
+                  </div>
 
-                <img :src="i.Presidentimg" alt="Presidentimg" />
+                  <img :src="i.Presidentimg" alt="Presidentimg" />
 
-                <div class="card_name label_body">{{ i.President }}</div>
+                  <div class="card_name label_body">{{ i.President }}</div>
 
-                <span class="card_footer label_footer" :class="`bgcolor_${index}`">{{
-                  i.getVotes
-                }}</span>
-              </a>
+                  <span class="card_footer label_footer" :class="`bgcolor_${index}`">{{
+                    i.getVotes
+                  }}</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="coordinate_wrap">
-          <img src="../assets/images/Party_emblem/bottom_icon_2012.png" alt="coordinate" />
+          <img
+            src="../assets/images/Party_emblem/bottom_icon_2012.png"
+            alt="coordinate"
+          />
           <ol>
             <li class="label_body" v-for="(i, index) in voteList">
               {{ i.getVotesnumber }}
@@ -107,6 +112,10 @@ const voteList = ref([
       .web_wrap {
         h3 {
           color: #ffffff;
+        }
+        .title img{
+          width: 250px;
+          height:  76px;
         }
 
         .card_container {
@@ -149,6 +158,24 @@ const voteList = ref([
               font-size: $h4;
               box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
             }
+          }
+          .card_wrap:hover {
+            transition: transform 0.5s ease;
+            transform: translate(7px, -7px);
+          }
+
+          .card_hvoer_bg0 {
+            background-color: map-get($primary_color, primary_color1);
+            border-radius: 11px;
+          }
+
+          .card_hvoer_bg1 {
+            background-color: map-get($primary_color, primary_color2);
+            border-radius: 11px;
+          }
+          .card_hvoer_bg2 {
+            background-color: $gray_font_color;
+            border-radius: 11px;
           }
         }
       }

@@ -59,40 +59,56 @@ const voteList = ref([
   <!-- <Loading/> -->
 
   <div class="enter_container">
+
+
+
     <div class="enter_title">
+
+
       <img src="../assets/images/logo/circle_bear_logo.png" alt="circle_bear_logo" />
+
+
+
       <h2 class="h2">台灣歷屆總統選舉 即時開票地圖</h2>
     </div>
 
     <p class="enter_year">2008 ~ 2020年</p>
 
     <div class="card_container">
-      <img src="../assets/images/Party_emblem/bottom_icon_2020_2016.png" alt="group_b_g_o" />
 
-      <div class="card_wrap" v-for="(i, index) in voteList">
 
-        <a :href="i.wikipediaLink" target="_blank" rel="noopener noreferrer">
-          <div class="card_title" :class="`bgcolor_${index}`">
-            <img :src="i.groupimg" alt="groupimg" />
+      <img
+        src="../assets/images/Party_emblem/bottom_icon_2020_2016.png"
+        alt="group_b_g_o"   class="custom-image"
+      />
 
-            <p class="label_body">{{ i.group }}</p>
-          </div>
+      <div v-for="(i, index) in voteList" :class="`card_hvoer_bg${index}`">
 
-          <img :src="i.Presidentimg" alt="Presidentimg" />
 
-          <div class="card_name label_body">{{ i.President }}</div>
+        <div class="card_wrap">
+          <a :href="i.wikipediaLink" target="_blank" rel="noopener noreferrer">
+            <div class="card_title" :class="`bgcolor_${index}`">
+              <img :src="i.groupimg" alt="groupimg" />
 
-          <span class="card_footer" :class="`bgcolor_${index}`"></span>
-        </a>
+              <p class="label_body">{{ i.group }}</p>
+            </div>
+
+            <img :src="i.Presidentimg" alt="Presidentimg" />
+
+            <div class="card_name label_body">{{ i.President }}</div>
+
+            <span class="card_footer" :class="`bgcolor_${index}`"></span>
+          </a>
+        </div>
       </div>
     </div>
+
     <div class="enter_container_foot">
       <router-link to="/2020_vote">
         <button class="button_check h1" @click="">查看</button>
       </router-link>
     </div>
   </div>
-
 </template>
 
 <style lang="scss" scoped>
@@ -123,6 +139,8 @@ body {
     align-items: center;
     padding-top: 200px;
 
+  
+
     .enter_title {
       display: flex;
 
@@ -134,21 +152,38 @@ body {
     .card_container {
       display: flex;
 
-      gap: 51px;
+      gap: 51px; 
+      
+    >img {
+      width: 81px;
+      height: 179px;
+    }
 
       .card_wrap {
         display: flex;
         flex-direction: column;
         width: 140px;
-        height: 198px;
-
-        box-shadow: none;
       }
       .card_wrap:hover {
-        transition:  transform 0.5s ease;
-        transform: translate(7px);
-        box-shadow: -20px 20px 0px 20px rgba(0,0,0,0.72);
-        border-radius: 7px;
+        transition: transform 0.5s ease;
+        transform: translate(7px, -7px);
+      }
+      .card_hvoer_bg0,
+      .card_hvoer_bg1 {
+        background-color: map-get($second_color, second_color2);
+        border-radius: 11px;
+      }
+
+      .card_hvoer_bg2 {
+        background-color: map-get($second_color, second_color3);
+        border-radius: 11px;
+      }
+
+      .card_hvoer_bg3,
+      .card_hvoer_bg4,
+      .card_hvoer_bg5 {
+        background-color: map-get($second_color, second_color1);
+        border-radius: 11px;
       }
 
       .card_title {
@@ -158,7 +193,6 @@ body {
         gap: 5px;
         border-radius: 12px 12px 0px 0px;
         box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
- 
 
         P {
           color: #ffffff;
