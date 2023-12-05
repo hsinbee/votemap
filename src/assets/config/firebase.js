@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+import{ref,onUnmounted} from 'vue'
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/getFirestore";
@@ -18,11 +19,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-export default firebaseApp
-export const db = getFirestore(app);
-
+const firebaseApp = firebase.initializeApp(config)
+const db = firebaseApp.firestore()
+const userscollection =db.collection('user')
 
 
 // export const firebaseAuth = getAuth(firebaseApp);
