@@ -43,7 +43,7 @@ const selectNavItem = ref(null);
           >
 
           <img
-            v-if="selectNavItem === index"
+            v-if="$route.path.indexOf(i.year)!= -1"
             src="../assets/images/logo/nav_bear_logo.png"
             alt="nav_bear"
           />
