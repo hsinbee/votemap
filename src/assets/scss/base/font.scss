@@ -112,8 +112,9 @@ h4 {
 .nav_link_top,
 .nav_link_bottom {
 
-    width: 100%;
-   
+
+    
+ 
     text-decoration: none;
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 800;
@@ -122,10 +123,26 @@ h4 {
 
     border: 4px solid#850d0d;
 
+    display:inline-block;
+
+}
+
+
+
+.nav_link_top {
+
+    width: 60%;
+    display:inline-block;
+    
+
 }
 
 
 .nav_link_bottom {
+    width: 60%;
+
     text-align: right;
+
+    border: 4px solid#2d0d85;
 
 }

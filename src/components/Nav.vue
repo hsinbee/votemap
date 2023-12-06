@@ -9,15 +9,6 @@ const navlist = ref([
 ]);
 
 const selectNavItem = ref(null);
-
-// const bearappear =(index)=>{
-//   for(let i=0;i<bear_pic.value.length;i++){
-//     bear_pic.value[i].style.display ="none"
-//   }
-//   bear_pic.value[index].style.display ="block"
-//   console.log( bear_pic.value[0].style.display)
-// }
-// const bear_pic = ref(null)
 </script>
 
 <template>
@@ -34,24 +25,23 @@ const selectNavItem = ref(null);
             :to="`/${i.year}_vote`"
             @click="selectNavItem = index"
             >{{ i.year }} 年</router-link
-          >
+          ><img
+            v-if="$route.path.indexOf(i.year) != -1"
+            src="../assets/images/logo/nav_bear_logo.png"
+            alt="nav_bear"
+          />
+
           <router-link
             class="nav_link_bottom"
             :to="`/${i.year}_vote`"
             @click="selectNavItem = index"
             >第{{ i.number }}任總統選舉</router-link
           >
-
-          <img
-            v-if="$route.path.indexOf(i.year)!= -1"
-            src="../assets/images/logo/nav_bear_logo.png"
-            alt="nav_bear"
-          />
         </li>
       </ol>
-
-      <img src="../assets/images/design_material/vote_line.png" alt="vote_line" />
     </div>
+
+    <img src="../assets/images/design_material/vote_line.png" alt="vote_line" />
   </div>
 </template>
 
@@ -71,19 +61,22 @@ const selectNavItem = ref(null);
     border-radius: 29px;
     box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25);
 
+    > img {
+      border: 6px solid#b1650f;
+
+      height: 260px;
+      padding-top: 30px;
+      position: relative;
+      z-index: 2;
+    }
     .nav_wrap {
-      // border: 3px solid#140707;
+      border: 3px solid#140707;
 
       display: flex;
 
       align-items: flex-start;
-
-      > img {
-        // border: 6px solid#b1650f;
-
-        height: 260px;
-        padding-top: 30px;
-      }
+      position: relative;
+      z-index: 999;
 
       ol {
         // border: 6px solid#0f35b1;
@@ -91,19 +84,22 @@ const selectNavItem = ref(null);
         padding: 0;
         list-style-type: none;
         text-decoration: none;
-
         color: map-get($accent_color, accent_color2);
       }
 
       li {
-        // border: 5px solid#0aa521;
+        border: 5px solid#0aa521;
 
         text-decoration: none;
-      }
 
+        margin-bottom: 10px; /* 设置下方间距，可根据需要调整 */
+
+        > img {
+          border: 6px solid#0f35b1;
+        }
+      }
       .selected {
         background-color: $web_background;
-    
       }
     }
   }
