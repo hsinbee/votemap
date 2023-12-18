@@ -27,7 +27,7 @@ const routes = [
         path: '/2008_vote',
         name: '2008_vote',
         component: () => import('../views/2008_vote.vue'),
-    },
+    }
 
 ];
 

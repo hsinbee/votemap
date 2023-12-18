@@ -58,7 +58,6 @@ const selectNavItem = ref(null);
 * {
   .nav_container {
     // border: 3px solid#b11e1e;
-
     width: 338px;
     height: 100%;
     display: flex;

@@ -2,6 +2,9 @@
 import { ref } from "vue";
 import Map from "../components/Map2020.vue";
 import Nav from "../components/Nav.vue";
+// import HoverBlock from"../components/HoverBlock.vue";
+
+import axios from "axios";
 
 const voteList = ref([
   {
@@ -36,6 +39,9 @@ const voteList = ref([
 </script>
 
 <template>
+
+  <!-- <HoverBlock /> -->
+
   <div class="web_container">
     <div class="web_map_container">
       <div class="web_wrap">
@@ -84,7 +90,10 @@ const voteList = ref([
         </div>
       </div>
 
-      <Map /> <Nav />
+      <Map />
+
+      <Nav />
+
     </div>
   </div>
 </template>
@@ -110,15 +119,17 @@ const voteList = ref([
       border-radius: 20px;
       padding: 150px;
       .web_wrap {
+        // border: 1px solid#fff;
         h3 {
           color: #ffffff;
         }
-        .title img{
+        .title img {
           width: 250px;
-          height:  76px;
+          height: 76px;
         }
 
         .card_container {
+          // border: 1px solid#9b2727;
           display: flex;
           gap: 37px;
 
@@ -152,7 +163,6 @@ const voteList = ref([
               display: flex;
               justify-content: center;
               align-items: center;
-
               border-radius: 0px 0px 11px 11px;
               color: #ffffff;
               font-size: $h4;
@@ -183,6 +193,7 @@ const voteList = ref([
     }
   }
   .coordinate_wrap {
+    // border: 1px solid#279b27;
     display: flex;
     padding-top: 50px;
 

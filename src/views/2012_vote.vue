@@ -84,7 +84,9 @@ const voteList = ref([
         </div>
       </div>
 
-      <Map /> <Nav />
+      <Map />
+
+      <Nav />
     </div>
   </div>
 </template>

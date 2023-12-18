@@ -1,16 +1,62 @@
-<script setup>
-// import { ref } from "vue";
+<script>
+import { ref, onMounted } from "vue";
+
+export default {
+  name: "YourComponent",
+  setup() {
+    const container = ref(null);
+    const svg = ref(null);
+
+    onMounted(() => {
+      for (let i = 1; i <= 19; i++) {
+        const path = svg.value.querySelector(`path:nth-child(${i})`);
+        const div = document.createElement("div");
+
+        div.style.position = "absolute";
+        div.style.zIndex = i;
+        div.style.display = "none";
+
+        const pathRect = path.getBoundingClientRect();
+        const svgRect = svg.value.getBoundingClientRect();
+
+        div.style.top = `${pathRect.top - svgRect.top + pathRect.height / 2}px`;
+        div.style.left = `${pathRect.left - svgRect.left + pathRect.width / 2}px`;
+
+        div.innerHTML = `<p>這是第 ${i} 條 path 上的數據。</p>`;
+
+        container.value.appendChild(div);
+
+        path.addEventListener("mouseover", () => {
+          div.style.display = "block";
+        });
+
+        path.addEventListener("mouseout", () => {
+          div.style.display = "none";
+        });
+      }
+    });
+
+    return {
+      container,
+      svg,
+    };
+  },
+};
 </script>
 
 <template>
-  <div class="map_wrap">
-    <svg
-      class="map-svg duration-300"
-      width="600"
-      height="750"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+  <div>
+    <div class="map_wrap" ref="container">
+      <svg
+        ref="svg"
+        class="map-svg duration-300"
+        width="600"
+        height="750"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        id="mySvg"
+        style="position: absolute; top: 0; left: 0; z-index: 0"
+      >
       <path
         id="基隆市"
         d="M459.49 58.883L459.28 67.423L459.42 69.573L462.08 72.373L461.79 74.163L460 75.453L457.13 76.533L453.47 76.103L445.86 72.943L443.71 71.363L441.05 68.923L439.04 66.413L437.82 63.903L435.74 61.253L435.31 59.173L437.61 57.593L442.78 55.373L445.94 53.293L446.94 53.943L448.66 55.883L451.46 56.883L459.5 58.893L459.49 58.883Z"
@@ -192,12 +238,15 @@
         class="map-svg stroke-white stroke-2 cursor-pointer duration-300"
       ></path>
     </svg>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .map_wrap {
+  width: 700px;
   height: 100vh;
+  position: relative;
 
   path {
     transition: 0.5s;

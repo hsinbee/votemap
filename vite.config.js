@@ -13,6 +13,19 @@ export default defineConfig({
 
   },
 
+  // server: {
+  //   proxy: {
+  //     "/api": {
+  //       // 服务器请求域名
+  //       target: "http://localhost:3000",
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/api/, ""),
+  //     },
+  //   },
+  // },
+
+});
+
   // css: {
   //   preprocessorOptions: {
   //     scss: {
@@ -21,7 +34,7 @@ export default defineConfig({
   //   }
   // }
 
-})
+
 
 
 // build: {

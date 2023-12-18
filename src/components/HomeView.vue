@@ -2,17 +2,9 @@
 // import { useMyStore } from "../stores/pinia.js";
 // useMyStore().increment();
 
-import Loading from "../components/Loading.vue";
+// import Loading from "../components/Loading.vue";
 
-import { ref, onMounted } from "vue";
-
-const showLoading = ref(true);
-
-onMounted(() => {
-  setTimeout(() => {
-    showLoading.value = false;
-  }, 3800);
-});
+import { ref } from "vue";
 
 const voteList = ref([
   {
@@ -65,49 +57,51 @@ const voteList = ref([
 </script>
 
 <template>
-  <div>
-    <Loading v-show="showLoading" />
+  <Loading />
 
-    <div class="enter_container" v-show="!showLoading">
-      <div class="enter_title">
-        <img src="../assets/images/logo/circle_bear_logo.png" alt="circle_bear_logo" />
+  <div class="enter_container">
+    <div class="enter_title">
+      <img src="../assets/images/logo/circle_bear_logo.png" alt="circle_bear_logo" />
 
-        <h2 class="h2">台灣歷屆總統選舉 即時開票地圖</h2>
-      </div>
+      <router-link to="/Loading">
+        <p>12756693</p>
+      </router-link>
 
-      <p class="enter_year">2008 ~ 2020年</p>
+      <h2 class="h2">台灣歷屆總統選舉 即時開票地圖</h2>
+    </div>
 
-      <div class="card_container">
-        <img
-          src="../assets/images/Party_emblem/bottom_icon_2020_2016.png"
-          alt="group_b_g_o"
-          class="custom-image"
-        />
+    <p class="enter_year">2008 ~ 2020年</p>
 
-        <div v-for="(i, index) in voteList" :class="`card_hvoer_bg${index}`">
-          <div class="card_wrap">
-            <a :href="i.wikipediaLink" target="_blank" rel="noopener noreferrer">
-              <div class="card_title" :class="`bgcolor_${index}`">
-                <img :src="i.groupimg" alt="groupimg" />
+    <div class="card_container">
+      <img
+        src="../assets/images/Party_emblem/bottom_icon_2020_2016.png"
+        alt="group_b_g_o"
+        class="custom-image"
+      />
 
-                <p class="label_body">{{ i.group }}</p>
-              </div>
+      <div v-for="(i, index) in voteList" :class="`card_hvoer_bg${index}`">
+        <div class="card_wrap">
+          <a :href="i.wikipediaLink" target="_blank" rel="noopener noreferrer">
+            <div class="card_title" :class="`bgcolor_${index}`">
+              <img :src="i.groupimg" alt="groupimg" />
 
-              <img :src="i.Presidentimg" alt="Presidentimg" />
+              <p class="label_body">{{ i.group }}</p>
+            </div>
 
-              <div class="card_name label_body">{{ i.President }}</div>
+            <img :src="i.Presidentimg" alt="Presidentimg" />
 
-              <span class="card_footer" :class="`bgcolor_${index}`"></span>
-            </a>
-          </div>
+            <div class="card_name label_body">{{ i.President }}</div>
+
+            <span class="card_footer" :class="`bgcolor_${index}`"></span>
+          </a>
         </div>
       </div>
+    </div>
 
-      <div class="enter_container_foot">
-        <router-link to="/2020_vote">
-          <button class="button_check h1" @click="">查看</button>
-        </router-link>
-      </div>
+    <div class="enter_container_foot">
+      <router-link to="/2020_vote">
+        <button class="button_check h1" @click="">查看</button>
+      </router-link>
     </div>
   </div>
 </template>
