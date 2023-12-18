@@ -17,14 +17,13 @@
 
 ## 使用技術
 * 前端
-- Vue 3 + Vite
-- SCSS
-- SVG
-- JavaScript
-- Axios
+ - Vue 3 + Vite
+ - SCSS
+ - SVG
+ - JavaScript
+ - Axios
 * 設計
- - UI 設計
- - LOGO設計
- - Figma prototype、 Design Guideline   
-User Story、 site map 、 wireframe 、 Mockup
+  - UI 設計
+  - LOGO設計
+  - Figma prototype、 Design Guideline、 User Story、 site map 、 wireframe 、 Mockup
 
