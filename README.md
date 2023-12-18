@@ -22,8 +22,7 @@
 - SVG
 - JavaScript
 - Axios
-
-  - 設計
+-設計
  - UI 設計
  - LOGO設計
  - Figma prototype、 Design Guideline   
