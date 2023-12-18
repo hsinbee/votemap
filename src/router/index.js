@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-const history = createWebHistory('/votemap/');
+// const history = createWebHistory('/votemap/');
 
 const routes = [
 
@@ -38,4 +38,4 @@ const routes = [
 // });
 
 export default router;
-export default createRouter({ history, routes });
+// export default createRouter({ history, routes });
