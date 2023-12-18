@@ -1,8 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
-// const history = createWebHistory('/votemap/');
 
 const routes = [
-
     {
         path: '/',
         name: 'HomeView',
@@ -30,12 +28,12 @@ const routes = [
         component: () => import('../views/2008_vote.vue'),
     }
 
+
 ];
 
-// const router = createRouter({
-//     history: createWebHistory(),
-//     routes,
-// });
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+});
 
 export default router;
-// export default createRouter({ history, routes });

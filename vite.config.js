@@ -5,7 +5,6 @@ import { resolve } from "path"; // 導入 resolve 方法
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/votemap/',
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),
@@ -13,19 +12,6 @@ export default defineConfig({
     },
 
   },
-
-  // server: {
-  //   proxy: {
-  //     "/api": {
-  //       // 服务器请求域名
-  //       target: "http://localhost:3000",
-  //       changeOrigin: true,
-  //       rewrite: (path) => path.replace(/^\/api/, ""),
-  //     },
-  //   },
-  // },
-
-});
 
   // css: {
   //   preprocessorOptions: {
@@ -35,7 +21,7 @@ export default defineConfig({
   //   }
   // }
 
-
+})
 
 
 // build: {
