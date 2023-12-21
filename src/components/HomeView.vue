@@ -8,9 +8,9 @@ import { ref } from "vue";
 
 const voteList = ref([
   {
-    groupimg: "/images/Party_emblem/g_progressiveparty.png",
+    groupimg: "././src/assets/images/Party_emblem/g_progressiveparty.png",
     group: "民主進步黨",
-    Presidentimg: "/images/President/english_chil.jpg",
+    Presidentimg: "././src/assets/images/President/english_chil.jpg",
     President: "蔡英文",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E8%94%A1%E8%8B%B1%E6%96%87",
   },
