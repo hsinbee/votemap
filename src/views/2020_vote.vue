@@ -8,9 +8,9 @@ import axios from "axios";
 
 const voteList = ref([
   {
-    groupimg: "src/assets/images/Party_emblem/g_progressiveparty.png",
+    groupimg: "../../assets/images/Party_emblem/g_progressiveparty.png",
     group: "民主進步黨",
-    Presidentimg: "src/assets/images/President/english_chil.jpg",
+    Presidentimg: "../../assets/images/President/english_chil.jpg",
     President: "蔡英文",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E8%94%A1%E8%8B%B1%E6%96%87",
     getVotes: "57.13%",
@@ -18,9 +18,9 @@ const voteList = ref([
   },
 
   {
-    groupimg: "src/assets/images/Party_emblem/b_chinesenationalistparty.png",
+    groupimg: ".../../assets/images/Party_emblem/b_chinesenationalistparty.png",
     group: "中國國民黨",
-    Presidentimg: "src/assets/images/President/korea_fissh.jpg",
+    Presidentimg: "../../assets/images/President/korea_fissh.jpg",
     President: "韓國瑜",
     wikipediaLink: "https://zh.wikipedia.org/wiki/%E9%9F%93%E5%9C%8B%E7%91%9C",
     getVotes: "38.61%",
