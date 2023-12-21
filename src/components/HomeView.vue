@@ -249,12 +249,5 @@ body {
   background-color: map-get($second_color, second_color1);
 }
 
-/* @mixin mobile{
-  @media (max-width: 768px;) {
 
-  }
-}
-@include mobile {
-
-  } */
 </style>
