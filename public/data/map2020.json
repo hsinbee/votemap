@@ -45,7 +45,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 11878,
-                        "voterTurnout": "5.25%"
+                        "voterTurnout": "5.25%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -53,7 +55,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 99360,
-                        "voterTurnout": "43.92%"
+                        "voterTurnout": "43.92%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -61,7 +65,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 114966,
-                        "voterTurnout": "50.82%"
+                        "voterTurnout": "50.82%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -76,21 +82,27 @@
                         "president": "宋楚瑜",
                         "party": "親民黨",
                         "votes": 7769,
-                        "voterTurnout": "4.34%"
+                        "voterTurnout": "4.34%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
                         "president": "韓國瑜",
                         "party": "中國國民黨",
                         "votes": 685830,
-                        "voterTurnout": "38.91%"
+                        "voterTurnout": "38.91%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
                         "president": "蔡英文",
                         "party": "民主進步黨",
                         "votes": 875854,
-                        "voterTurnout": "56.52%"
+                        "voterTurnout": "56.52%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -105,21 +117,27 @@
                         "president": "宋楚瑜",
                         "party": "親民黨",
                         "votes": 112620,
-                        "voterTurnout": "4.57%"
+                        "voterTurnout": "4.57%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
                         "president": "韓國瑜",
                         "party": "中國國民黨",
                         "votes": 959631,
-                        "voterTurnout": "38.91%"
+                        "voterTurnout": "38.91%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
                         "president": "蔡英文",
                         "party": "民主進步黨",
                         "votes": 1393936,
-                        "voterTurnout": "56.52%"
+                        "voterTurnout": "56.52%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -135,7 +153,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 63132,
-                        "voterTurnout": "4.82%"
+                        "voterTurnout": "4.82%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -143,7 +163,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 529749,
-                        "voterTurnout": "40.40%"
+                        "voterTurnout": "40.40%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -151,7 +173,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 718260,
-                        "voterTurnout": "54.78%"
+                        "voterTurnout": "54.78%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -167,7 +191,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 18435,
-                        "voterTurnout": "5.67%"
+                        "voterTurnout": "5.67%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -175,7 +201,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 154224,
-                        "voterTurnout": "47.45%"
+                        "voterTurnout": "47.45%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -183,7 +211,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 152380,
-                        "voterTurnout": "46.88%"
+                        "voterTurnout": "46.88%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -199,7 +229,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 14103,
-                        "voterTurnout": "5.40%"
+                        "voterTurnout": "5.40%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -207,7 +239,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 102725,
-                        "voterTurnout": "39.34%"
+                        "voterTurnout": "39.34%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -215,7 +249,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 144274,
-                        "voterTurnout": "47.45%"
+                        "voterTurnout": "47.45%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -231,7 +267,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 15222,
-                        "voterTurnout": "4.66% "
+                        "voterTurnout": "4.66% ",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -239,7 +277,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 164345,
-                        "voterTurnout": "50.32%"
+                        "voterTurnout": "50.32%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_long_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -247,7 +287,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 147034,
-                        "voterTurnout": "45.02%"
+                        "voterTurnout": "45.02%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_middle_g_progressiveparty.png"
                     }
                 ]
             },
@@ -263,7 +305,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 84800,
-                        "voterTurnout": "4.99%"
+                        "voterTurnout": "4.99%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -271,7 +315,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 646366,
-                        "voterTurnout": "38.06%"
+                        "voterTurnout": "38.06%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_long_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -279,7 +325,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 967304,
-                        "voterTurnout": "56.95%"
+                        "voterTurnout": "56.95%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_middle_g_progressiveparty.png"
                     }
                 ]
             },
@@ -295,7 +343,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 35060,
-                        "voterTurnout": "4.59% "
+                        "voterTurnout": "4.59% ",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -303,7 +353,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 291835,
-                        "voterTurnout": "38.24%"
+                        "voterTurnout": "38.24%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -311,7 +363,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 436336,
-                        "voterTurnout": "57.17%"
+                        "voterTurnout": "57.17%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -327,7 +381,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 15331,
-                        "voterTurnout": "3.83%"
+                        "voterTurnout": "3.83%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -335,7 +391,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 138341,
-                        "voterTurnout": "34.60% "
+                        "voterTurnout": "34.60% ",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -343,7 +401,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 246116,
-                        "voterTurnout": "61.56%"
+                        "voterTurnout": "61.56%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -359,7 +419,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 11138,
-                        "voterTurnout": "3.62%"
+                        "voterTurnout": "3.62%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -367,7 +429,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 98810,
-                        "voterTurnout": "32.16% "
+                        "voterTurnout": "32.16% ",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -375,7 +439,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 197342,
-                        "voterTurnout": "64.22%"
+                        "voterTurnout": "64.22%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -391,7 +457,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 6204,
-                        "voterTurnout": "3.84%"
+                        "voterTurnout": "3.84%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -399,7 +467,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 56269,
-                        "voterTurnout": "34.79%"
+                        "voterTurnout": "34.79%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -407,7 +477,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 99265,
-                        "voterTurnout": "61.37%"
+                        "voterTurnout": "61.37%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -423,7 +495,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 41075,
-                        "voterTurnout": "3.52%"
+                        "voterTurnout": "3.52%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -431,7 +505,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 339702,
-                        "voterTurnout": "29.10%"
+                        "voterTurnout": "29.10%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -439,7 +515,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 786471,
-                        "voterTurnout": "67.38%"
+                        "voterTurnout": "67.38%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -455,7 +533,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 55309,
-                        "voterTurnout": "3.14%"
+                        "voterTurnout": "3.14%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -463,7 +543,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 610896,
-                        "voterTurnout": "34.63%"
+                        "voterTurnout": "34.63%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -471,7 +553,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 1097621,
-                        "voterTurnout": "62.23%"
+                        "voterTurnout": "62.23%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -487,7 +571,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 14021,
-                        "voterTurnout": "2.74%"
+                        "voterTurnout": "2.74%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -495,7 +581,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 179353,
-                        "voterTurnout": "35.10%"
+                        "voterTurnout": "35.10%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -503,7 +591,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 317676,
-                        "voterTurnout": "62.16%"
+                        "voterTurnout": "62.16%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -519,7 +609,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 4163,
-                        "voterTurnout": "3.60%"
+                        "voterTurnout": "3.60%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -527,7 +619,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 67413,
-                        "voterTurnout": "58.28%"
+                        "voterTurnout": "58.28%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -535,7 +629,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 44092,
-                        "voterTurnout": "38.12%"
+                        "voterTurnout": "38.12%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -551,7 +647,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 6869,
-                        "voterTurnout": "3.71% "
+                        "voterTurnout": "3.71% ",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -559,7 +657,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 111834,
-                        "voterTurnout": "60.38%"
+                        "voterTurnout": "60.38%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -567,7 +667,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 66509,
-                        "voterTurnout": "35.91%"
+                        "voterTurnout": "35.91%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -583,7 +685,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 10739,
-                        "voterTurnout": "3.91%"
+                        "voterTurnout": "3.91%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -591,7 +695,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 90010,
-                        "voterTurnout": "32.80% "
+                        "voterTurnout": "32.80% ",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -599,7 +705,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 173657,
-                        "voterTurnout": "63.28%"
+                        "voterTurnout": "63.28%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_long_g_progressiveparty.png"
                     }
                 ]
             },
@@ -615,7 +723,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 188,
-                        "voterTurnout": "3.04%"
+                        "voterTurnout": "3.04%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -623,7 +733,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 4776,
-                        "voterTurnout": "77.16%"
+                        "voterTurnout": "77.16%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_long_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -631,7 +743,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 1226,
-                        "voterTurnout": "19.81%"
+                        "voterTurnout": "19.81%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_middle_g_progressiveparty.png"
                     }
                 ]
             },
@@ -647,7 +761,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 1636,
-                        "voterTurnout": "3.41%"
+                        "voterTurnout": "3.41%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -655,7 +771,9 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 35948,
-                        "voterTurnout": "74.83%"
+                        "voterTurnout": "74.83%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_long_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
@@ -663,7 +781,9 @@
                         "vicePresident": "賴清德",
                         "party": "民主進步黨",
                         "votes": 10456,
-                        "voterTurnout": "21.77%"
+                        "voterTurnout": "21.77%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_middle_g_progressiveparty.png"
                     }
                 ]
             },
@@ -679,7 +799,9 @@
                         "vicePresident": "余湘",
                         "party": "親民黨",
                         "votes": 2583,
-                        "voterTurnout": "5.07%"
+                        "voterTurnout": "5.07%",
+                        "presidentImage": "/images/President/fish_chu_circle.jpg",
+                        "barImage": "/images/Bar/bar_short_or_peoplefirstarty.png"
                     },
                     {
                         "id": "2",
@@ -687,14 +809,18 @@
                         "vicePresident": "張善政",
                         "party": "中國國民黨",
                         "votes": 20911,
-                        "voterTurnout": "41.08%"
+                        "voterTurnout": "41.08%",
+                        "presidentImage": "images/President/korea_fissh_circle.jpg",
+                        "barImage":  "images/Bar/bar_middle_b_chinesenationalistparty.png"
                     },
                     {
                         "id": "3",
                         "president": "蔡英文",
                         "party": "民主進步黨",
                         "votes": 27410,
-                        "voterTurnout": "58.85%"
+                        "voterTurnout": "58.85%",
+                        "presidentImage": "images/President/english_chil_circle.jpg",
+                        "barImage":"images/Bar/bar_middle_g_progressiveparty.png"
                     }
                 ]
             }

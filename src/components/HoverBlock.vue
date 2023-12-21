@@ -86,8 +86,7 @@ onMounted(async () => {
 @import "@/assets/scss/base/color.scss";
 @import "@/assets/scss/base/font.scss";
 
-* {
-}
+
 .hover_wrap {
   padding: 0px 20px 20px 20px;
   border: 1px solid#000000;

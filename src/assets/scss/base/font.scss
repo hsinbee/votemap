@@ -48,7 +48,7 @@ h3 {
 
 h4 {
 
-    font-size: $h4 ;
+    font-size: $h4;
     font-weight: 500;
     line-height: 28px;
     font-family: 'Noto Sans TC', sans-serif;
@@ -84,12 +84,7 @@ h4 {
 
 
 
-
-
 // component-----------------------
-
-
-
 
 
 .button_check {
@@ -106,10 +101,7 @@ h4 {
     box-shadow: 9px 8px 0px 0px #6c96ca94;
     cursor: pointer;
 
-
 }
-
-
 
 .button_check:hover {
     transition: transform 0.3s ease;
@@ -140,4 +132,82 @@ h4 {
     // border: 4px solid#2d0d85;
     text-align: right;
 
+}
+
+
+
+.hover_wrap {
+    padding: 0px 20px 20px 20px;
+    border: 1px solid#000000;
+    border-radius: 30px;
+    background: linear-gradient(180deg, #d0eaff 0%, rgba(208, 234, 255, 0) 100%),
+        var(--gray-colors-white, #fff);
+    stroke-width: 1px;
+    stroke: #000;
+    filter: drop-shadow(0px 4px 4px #adbbff);
+    display: inline-block;
+    
+  
+
+    p {
+        padding-left: 5px;
+    }
+
+    h2 {
+        // border: 1px solid#d44b4b;
+        font-family: "Noto Sans TC";
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px;
+    }
+
+    h1 {
+        // border: 1px solid#d44b4b;
+        font-family: "Noto Sans TC";
+        font-weight: 500;
+   
+    }
+
+
+    .hover_container {
+
+
+        // border: 10px solid#3bf144;
+        display: flex;
+        align-items: center;
+
+        .hover_container>img {
+            border: 1px solid#156cf0;
+            width: 25px;
+            height: 25px;
+        }
+
+        .bar {
+            // border: 1px solid#fd29e1;
+        }
+
+        .bar p {
+            // border: 1px solid#e2f3a3;
+            margin: 0;
+            color: #2d3648;
+            text-align: right;
+            font-family: "Noto Sans TC";
+            font-size: 17px;
+            font-weight: 800;
+            line-height: 20px;
+        }
+
+        h2 {
+            white-space: nowrap;
+        }
+
+        p {
+            font-size: 20px;
+            font-family: "Noto Sans TC";
+            font-weight: 800;
+            padding: 10px;
+
+        }
+
+    }
 }

@@ -8,26 +8,18 @@ const navlist = ref([
   { year: 2008, number: 12 },
 ]);
 
-
 const selectNavItem = ref(null);
-
-
-
-
 </script>
 
 <template>
   <div class="nav_container">
     <div class="nav_wrap">
-      <ol v-for="(i, index) in navlist" :key="index"
-      >
-      
+      <ol v-for="(i, index) in navlist" :key="index">
         <li :class="{ selected: selectNavItem === index }">
           <router-link
             class="nav_link_top"
             :to="`/${i.year}_vote`"
             @click="selectNavItem = index"
-           
             >{{ i.year }} 年</router-link
           >
 
@@ -55,7 +47,7 @@ const selectNavItem = ref(null);
 @import "@/assets/scss/base/color.scss";
 @import "@/assets/scss/base/font.scss";
 
-* {
+
   .nav_container {
     // border: 3px solid#b11e1e;
     width: 338px;
@@ -67,15 +59,14 @@ const selectNavItem = ref(null);
     box-shadow: 0px -3px 17px 0px rgba(0, 0, 0, 0.25) inset;
     position: relative;
     z-index: 999;
- 
 
     > img {
       // border: 6px solid#b1650f;
-     padding-top: 20px;
-     width: 18px;
-      height:80%;
+      padding-top: 20px;
+      width: 18px;
+      height: 80%;
       position: absolute;
-      right: 70px;
+      right: 58px;
       z-index: -1;
     }
     .nav_wrap {
@@ -88,11 +79,11 @@ const selectNavItem = ref(null);
         list-style-type: none;
         text-decoration: none;
         color: map-get($accent_color, accent_color2);
-        
+
         > img {
           // border: 6px solid#0f35b1;
           height: 50px;
-      
+    
         }
       }
 
@@ -100,9 +91,7 @@ const selectNavItem = ref(null);
         // border: 5px solid#0aa521;
 
         text-decoration: none;
-      padding-top: 10px;
-       
-       
+        padding-top: 10px;
       }
       .selected {
         background-color: $web_background;
@@ -110,5 +99,5 @@ const selectNavItem = ref(null);
       }
     }
   }
-}
+
 </style>

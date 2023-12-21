@@ -1,57 +1,81 @@
 <script setup>
-import { ref} from "vue";
+import { ref, onMounted } from "vue";
+import axios from "axios";
 
-// const container = ref(null);
-// const svg = ref(null);
-// const response = ref(null);
+const datalist = ref({});
 
+const getdata = async () => {
+  try {
+    const result = await axios.get("/data/map2020.json");
 
-// const componentData = reactive({
-//   container,
-//   svg,
-//   response,
-// });
+    datalist.value = result.data.datas;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+onMounted(async () => {
+  await getdata();
 
+  const container = document.getElementById("container");
+  const svg = document.getElementById("mySvg");
 
+  console.log(datalist.value);
+  for (let i = 1; i <= datalist.value.cityGroup.length; i++) {
+    const path = document.querySelector(`#mySvg path:nth-child(${i})`);
 
+    const div = document.createElement("div");
+    div.style.position = "absolute";
+    div.style.zIndex = i;
+    div.style.display = "none";
 
-// for (let i = 1; i <= 19; i++) {
-//   const path = componentData.svg.value.querySelector(`path:nth-child(${i})`);
-//   const div = document.createElement("div");
+    const pathRect = path.getBoundingClientRect();
+    const svgRect = svg.getBoundingClientRect();
 
-//   div.style.position = "absolute";
-//   div.style.zIndex = i;
-//   div.style.display = "none";
+    div.style.top = `${pathRect.top - svgRect.top + pathRect.height / 2}px`;
+    div.style.left = `${pathRect.left - svgRect.left + pathRect.width / 2}px`;
 
-//   const pathRect = path.getBoundingClientRect();
-//   const svgRect = componentData.svg.value.getBoundingClientRect();
+    let htmltext = "";
+    for (let y = 0; y < 3; y++) {
+      const candidate = datalist.value.cityGroup[i]?.candidate[y];
 
-//   div.style.top = `${pathRect.top - svgRect.top + pathRect.height / 2}px`;
-//   div.style.left = `${pathRect.left - svgRect.left + pathRect.width / 2}px`;
+      htmltext += `<div>
+<img :src=${candidate.presidentImage}" alt="${candidate.president}" /> 
+<h2>${candidate.president}</h2>
+    <div class="bar">
+      <!-- <img :src="candidate.partyImage" alt="" /> -->
+      <p>${candidate.votes} 票</p>
+    </div>
+    <p>${candidate.voterTurnout}%</p>
+  </div>`;
+    }
 
-//   div.innerHTML = `
-//       <p>ji3jidowijed</p>
-//     `;
+    div.innerHTML = `
+  <div class="hover_wrap">
+    <h1>${datalist.value.cityGroup[i]?.fieldCN} </h1>
+    <div class="hover_container">
+      ${htmltext}
+    </div>
+  </div>`;
 
-//   componentData.container.value.appendChild(div);
+    container.appendChild(div);
 
-//   path.addEventListener("mouseover", () => {
-//     div.style.display = "block";
-//   });
+    path.addEventListener("mouseover", () => {
+      div.style.display = "block";
+    });
 
-//   path.addEventListener("mouseout", () => {
-//     div.style.display = "none";
-//   });
-// }
+    path.addEventListener("mouseout", () => {
+      div.style.display = "none";
+    });
+  }
+});
 </script>
 
 <template>
   <!-- <HoverBlock/> -->
- 
+
   <div>
-    <div class="map_wrap" ref="container">
+    <div id="container" style="position: relative">
       <svg
-        ref="svg"
         class="map-svg duration-300"
         width="600"
         height="750"
@@ -246,7 +270,7 @@ import { ref} from "vue";
 </template>
 
 <style lang="scss" scoped>
-.map_wrap {
+#container {
   // border: 1px solid#fff;
   width: 700px;
   height: 100vh;
@@ -261,63 +285,63 @@ import { ref} from "vue";
     transform: translate(-5px, -5px);
     filter: drop-shadow(15px 15px 25px rgba(0, 0, 0, 0.8));
   }
-}
 
-.hover_wrap {
-  padding: 0px 20px 20px 20px;
-  border: 1px solid#000000;
-  border-radius: 30px;
-  background: linear-gradient(180deg, #d0eaff 0%, rgba(208, 234, 255, 0) 100%),
-    var(--gray-colors-white, #fff);
-  stroke-width: 1px;
-  stroke: #000;
-  filter: drop-shadow(0px 4px 4px #adbbff);
-  display: inline-block;
-
-  p {
-    padding-left: 5px;
-  }
-
-  h2 {
-    border: 1px solid#d44b4b;
-    font-family: "Noto Sans TC";
-    font-size: 18px;
-    font-weight: 500;
-  }
-  h1 {
-    border: 1px solid#d44b4b;
-    font-family: "Noto Sans TC";
-    font-weight: 500;
-  }
-
-  .hover_container {
+  .hover_wrap {
+    padding: 0px 20px 20px 20px;
     border: 1px solid#000000;
+    border-radius: 30px;
+    background: linear-gradient(180deg, #d0eaff 0%, rgba(208, 234, 255, 0) 100%),
+      var(--gray-colors-white, #fff);
+    stroke-width: 1px;
+    stroke: #000;
+    filter: drop-shadow(0px 4px 4px #adbbff);
     display: inline-block;
-    .candidate {
-      border: 1px solid#19ad20;
-      display: flex;
-      align-items: center;
-      .candidate > img {
-        border: 1px solid#156cf0;
 
-        width: 45px;
-        height: 43px;
-      }
+    p {
+      padding-left: 5px;
+    }
 
-      .bar {
-        border: 1px solid#fd29e1;
-      }
+    h2 {
+      border: 1px solid#d44b4b;
+      font-family: "Noto Sans TC";
+      font-size: 18px;
+      font-weight: 500;
+    }
+    h1 {
+      border: 1px solid#d44b4b;
+      font-family: "Noto Sans TC";
+      font-weight: 500;
+    }
 
-      .bar p {
-        border: 1px solid#b3df13;
-        margin: 0;
-        color: #2d3648;
-        text-align: right;
-        font-family: "Noto Sans TC";
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-      }
+    .hover_container {
+      border: 1px solid#000000;
+      display: inline-block;
+    }
+  }
+  .candidate {
+    border: 1px solid#19ad20;
+    display: flex;
+    align-items: center;
+    .candidate > img {
+      border: 1px solid#156cf0;
+
+      width: 45px;
+      height: 43px;
+    }
+
+    .bar {
+      border: 1px solid#fd29e1;
+    }
+
+    .bar p {
+      border: 1px solid#b3df13;
+      margin: 0;
+      color: #2d3648;
+      text-align: right;
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
     }
   }
 }

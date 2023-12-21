@@ -13,7 +13,6 @@ const getdata = async () => {
     console.error("Error fetching data:", error);
   }
 };
-
 onMounted(async () => {
   await getdata();
 
@@ -24,40 +23,50 @@ onMounted(async () => {
   for (let i = 1; i <= datalist.value.cityGroup.length; i++) {
     const path = document.querySelector(`#mySvg path:nth-child(${i})`);
 
-    const div = document.createElement("div");
-    div.style.position = "absolute";
-    div.style.zIndex = i;
-    div.style.display = "none";
+    const divmap = document.createElement("div");
+    divmap.style.position = "absolute";
+    divmap.style.zIndex = i;
+    divmap.style.display = "none";
 
     const pathRect = path.getBoundingClientRect();
     const svgRect = svg.getBoundingClientRect();
 
-    div.style.top = `${pathRect.top - svgRect.top + pathRect.height / 2}px`;
-    div.style.left = `${pathRect.left - svgRect.left + pathRect.width / 2}px`;
+    divmap.style.top = `${pathRect.top - svgRect.top + pathRect.height / 2}px`;
+    divmap.style.left = `${pathRect.left - svgRect.left + pathRect.width / 2}px`;
 
-    div.innerHTML = `<div>
+    let htmltext = "";
+    for (let y = 0; y < 3; y++) {
+      const candidate = datalist.value.cityGroup[i]?.candidate[y];
 
-<h1>${datalist.value.cityGroup[i].fieldCN} </h1>
-
-<div class="hover_container">
-  <div v-for="city in datas.cityGroup" :key="city.CityId" class="candidate">
-    <h2>{{ city.fieldCN }}</h2>
+      htmltext += `
+      
+      <div class="hover_container">
+<img src=${candidate.presidentImage} alt="${candidate.president}" /> 
+<h2>${candidate.president}</h2>
     <div class="bar">
-      <p>{{ city.candidate[0].votes }} 票</p>
+      <img src=${candidate.barImage} alt="${candidate.president}" /> 
+      <p>${candidate.votes} 票</p>
     </div>
-    <p>{{ city.candidate[0].voterTurnout }}%</p>
-  </div>
-</div>
-</div>`;
+    <p>${candidate.voterTurnout}</p>
+  </div>`;
+    }
 
-    container.appendChild(div);
+    divmap.innerHTML = `
+  <div class="hover_wrap">
+    <h1>${datalist.value.cityGroup[i]?.fieldCN} </h1>
+    <div >
+      ${htmltext}
+    </div>
+  </div>`;
+
+    container.appendChild(divmap);
 
     path.addEventListener("mouseover", () => {
-      div.style.display = "block";
+      divmap.style.display = "block";
     });
 
     path.addEventListener("mouseout", () => {
-      div.style.display = "none";
+      divmap.style.display = "none";
     });
   }
 });
@@ -263,7 +272,11 @@ onMounted(async () => {
 </template>
 
 <style lang="scss" scoped>
-.map_wrap {
+@import "@/assets/scss/base/color.scss";
+@import "@/assets/scss/base/font.scss";
+
+
+#container {
   // border: 1px solid#fff;
   width: 700px;
   height: 100vh;
@@ -278,64 +291,11 @@ onMounted(async () => {
     transform: translate(-5px, -5px);
     filter: drop-shadow(15px 15px 25px rgba(0, 0, 0, 0.8));
   }
+
+
+
 }
 
-.hover_wrap {
-  padding: 0px 20px 20px 20px;
-  border: 1px solid#000000;
-  border-radius: 30px;
-  background: linear-gradient(180deg, #d0eaff 0%, rgba(208, 234, 255, 0) 100%),
-    var(--gray-colors-white, #fff);
-  stroke-width: 1px;
-  stroke: #000;
-  filter: drop-shadow(0px 4px 4px #adbbff);
-  display: inline-block;
 
-  p {
-    padding-left: 5px;
-  }
 
-  h2 {
-    border: 1px solid#d44b4b;
-    font-family: "Noto Sans TC";
-    font-size: 18px;
-    font-weight: 500;
-  }
-  h1 {
-    border: 1px solid#d44b4b;
-    font-family: "Noto Sans TC";
-    font-weight: 500;
-  }
-
-  .hover_container {
-    border: 1px solid#000000;
-    display: inline-block;
-    .candidate {
-      border: 1px solid#19ad20;
-      display: flex;
-      align-items: center;
-      .candidate > img {
-        border: 1px solid#156cf0;
-
-        width: 45px;
-        height: 43px;
-      }
-
-      .bar {
-        border: 1px solid#fd29e1;
-      }
-
-      .bar p {
-        border: 1px solid#b3df13;
-        margin: 0;
-        color: #2d3648;
-        text-align: right;
-        font-family: "Noto Sans TC";
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-      }
-    }
-  }
-}
 </style>

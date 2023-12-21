@@ -1,54 +1,83 @@
-<script>
+<script setup>
 import { ref, onMounted } from "vue";
+import axios from "axios";
 
-export default {
-  name: "YourComponent",
-  setup() {
-    const container = ref(null);
-    const svg = ref(null);
+const datalist = ref({});
 
-    onMounted(() => {
-      for (let i = 1; i <= 19; i++) {
-        const path = svg.value.querySelector(`path:nth-child(${i})`);
-        const div = document.createElement("div");
+const getdata = async () => {
+  try {
+    const result = await axios.get("/data/map2016.json");
 
-        div.style.position = "absolute";
-        div.style.zIndex = i;
-        div.style.display = "none";
+    datalist.value = result.data.datas;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+onMounted(async () => {
+  await getdata();
 
-        const pathRect = path.getBoundingClientRect();
-        const svgRect = svg.value.getBoundingClientRect();
+  const container = document.getElementById("container");
+  const svg = document.getElementById("mySvg");
 
-        div.style.top = `${pathRect.top - svgRect.top + pathRect.height / 2}px`;
-        div.style.left = `${pathRect.left - svgRect.left + pathRect.width / 2}px`;
+  console.log(datalist.value);
+  for (let i = 1; i <= datalist.value.cityGroup.length; i++) {
+    const path = document.querySelector(`#mySvg path:nth-child(${i})`);
 
-        div.innerHTML = `<p>這是第 ${i} 條 path 上的數據。</p>`;
+    const divmap = document.createElement("div");
+    divmap.style.position = "absolute";
+    divmap.style.zIndex = i;
+    divmap.style.display = "none";
 
-        container.value.appendChild(div);
+    const pathRect = path.getBoundingClientRect();
+    const svgRect = svg.getBoundingClientRect();
 
-        path.addEventListener("mouseover", () => {
-          div.style.display = "block";
-        });
+    divmap.style.top = `${pathRect.top - svgRect.top + pathRect.height / 2}px`;
+    divmap.style.left = `${pathRect.left - svgRect.left + pathRect.width / 2}px`;
 
-        path.addEventListener("mouseout", () => {
-          div.style.display = "none";
-        });
-      }
+    let htmltext = "";
+    for (let y = 0; y < 3; y++) {
+      const candidate = datalist.value.cityGroup[i]?.candidate[y];
+
+      htmltext += `
+      
+      <div class="hover_container">
+<img src=${candidate.presidentImage} alt="${candidate.president}" /> 
+<h2>${candidate.president}</h2>
+    <div class="bar">
+      <img src=${candidate.barImage} alt="${candidate.president}" /> 
+      <p>${candidate.votes} 票</p>
+    </div>
+    <p>${candidate.voterTurnout}</p>
+  </div>`;
+    }
+
+    divmap.innerHTML = `
+  <div class="hover_wrap">
+    <h1>${datalist.value.cityGroup[i]?.fieldCN} </h1>
+    <div >
+      ${htmltext}
+    </div>
+  </div>`;
+
+    container.appendChild(divmap);
+
+    path.addEventListener("mouseover", () => {
+      divmap.style.display = "block";
     });
 
-    return {
-      container,
-      svg,
-    };
-  },
-};
+    path.addEventListener("mouseout", () => {
+      divmap.style.display = "none";
+    });
+  }
+});
 </script>
 
 <template>
+  <!-- <HoverBlock/> -->
+
   <div>
-    <div class="map_wrap" ref="container">
+    <div id="container" style="position: relative">
       <svg
-        ref="svg"
         class="map-svg duration-300"
         width="600"
         height="750"
@@ -57,6 +86,7 @@ export default {
         id="mySvg"
         style="position: absolute; top: 0; left: 0; z-index: 0"
       >
+
         <path
           id="基隆市"
           d="M459.49 58.883L459.28 67.423L459.42 69.573L462.08 72.373L461.79 74.163L460 75.453L457.13 76.533L453.47 76.103L445.86 72.943L443.71 71.363L441.05 68.923L439.04 66.413L437.82 63.903L435.74 61.253L435.31 59.173L437.61 57.593L442.78 55.373L445.94 53.293L446.94 53.943L448.66 55.883L451.46 56.883L459.5 58.893L459.49 58.883Z"
@@ -243,10 +273,16 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.map_wrap {
+@import "@/assets/scss/base/color.scss";
+@import "@/assets/scss/base/font.scss";
+
+
+#container {
+  // border: 1px solid#fff;
   width: 700px;
   height: 100vh;
   position: relative;
+
   path {
     transition: 0.5s;
     cursor: pointer;
@@ -256,5 +292,10 @@ export default {
     transform: translate(-5px, -5px);
     filter: drop-shadow(15px 15px 25px rgba(0, 0, 0, 0.8));
   }
+
+
 }
+
+
+
 </style>
