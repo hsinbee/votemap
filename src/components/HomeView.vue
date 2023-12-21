@@ -8,48 +8,48 @@ import { ref } from "vue";
 
 const voteList = ref([
   {
-    groupimg: "src/assets/images/Party_emblem/g_progressiveparty.png",
+    groupimg: "/images/Party_emblem/g_progressiveparty.png",
     group: "民主進步黨",
-    Presidentimg: "src/assets/images/President/english_chil.jpg",
+    Presidentimg: "/images/President/english_chil.jpg",
     President: "蔡英文",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E8%94%A1%E8%8B%B1%E6%96%87",
   },
   {
-    groupimg: "src/assets/images/Party_emblem/g_progressiveparty.png",
+    groupimg: "/images/Party_emblem/g_progressiveparty.png",
     group: "民主進步黨",
-    Presidentimg: "src/assets/images/President/long_ting.jpg",
+    Presidentimg: "/images/President/long_ting.jpg",
     President: "謝長廷",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E8%AC%9D%E9%95%B7%E5%BB%B7",
   },
 
   {
-    groupimg: "src/assets/images/Party_emblem/or_peoplefirstarty.png",
+    groupimg: "/images/Party_emblem/or_peoplefirstarty.png",
     group: "親民黨",
-    Presidentimg: "src/assets/images/President/fish_chu.jpg",
+    Presidentimg: "/images/President/fish_chu.jpg",
     President: "宋楚瑜",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E5%AE%8B%E6%A5%9A%E7%91%9C",
   },
 
   {
-    groupimg: "src/assets/images/Party_emblem/b_chinesenationalistparty.png",
+    groupimg: "/images/Party_emblem/b_chinesenationalistparty.png",
     group: "中國國民黨",
-    Presidentimg: "src/assets/images/President/horse_nine.jpg",
+    Presidentimg: "/images/President/horse_nine.jpg",
     President: "馬英九",
     wikipediaLink: "https://zh.wikipedia.org/wiki/%E9%A6%AC%E8%8B%B1%E4%B9%9D",
   },
 
   {
-    groupimg: "src/assets/images/Party_emblem/b_chinesenationalistparty.png",
+    groupimg: "/images/Party_emblem/b_chinesenationalistparty.png",
     group: "中國國民黨",
-    Presidentimg: "src/assets/images/President/pig_loun.jpg",
+    Presidentimg: "/images/President/pig_loun.jpg",
     President: "朱立倫",
     wikipediaLink: "https://zh.wikipedia.org/wiki/%E9%A6%AC%E8%8B%B1%E4%B9%9D",
   },
 
   {
-    groupimg: "src/assets/images/Party_emblem/b_chinesenationalistparty.png",
+    groupimg: "/images/Party_emblem/b_chinesenationalistparty.png",
     group: "中國國民黨",
-    Presidentimg: "src/assets/images/President/korea_fissh.jpg",
+    Presidentimg: "/images/President/korea_fissh.jpg",
     President: "韓國瑜",
     wikipediaLink: "https://zh.wikipedia.org/wiki/%E9%9F%93%E5%9C%8B%E7%91%9C",
   },
