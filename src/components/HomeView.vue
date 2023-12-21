@@ -61,7 +61,7 @@ const voteList = ref([
 
   <div class="enter_container">
     <div class="enter_title">
-      <img src="../assets/images/logo/circle_bear_logo.png" alt="circle_bear_logo" />
+      <img src="/images/logo/circle_bear_logo.png" alt="circle_bear_logo" />
 
       <router-link to="/Loading">
         <p>12756693</p>
@@ -74,7 +74,7 @@ const voteList = ref([
 
     <div class="card_container">
       <img
-        src="../assets/images/Party_emblem/bottom_icon_2020_2016.png"
+        src="/images/Party_emblem/bottom_icon_2020_2016.png"
         alt="group_b_g_o"
         class="custom-image"
       />
