@@ -29,7 +29,7 @@ const voteList = ref([
   {
     groupimg: "images/Party_emblem/or_peoplefirstarty.png",
     group: "親民黨",
-    Presidentimg: "images/President/fish_chu.jpg",
+    Presidentimg: "images/President/B_fish_chu.png",
     President: "宋楚瑜",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E5%AE%8B%E6%A5%9A%E7%91%9C",
     getVotes: "4.26%",
