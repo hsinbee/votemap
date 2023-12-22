@@ -8,9 +8,9 @@ import axios from "axios";
 
 const voteList = ref([
   {
-    groupimg: "./assets/images/Party_emblem/g_progressiveparty.png",
+    groupimg: "src/public/images/Party_emblem/g_progressiveparty.png",
     group: "民主進步黨",
-    Presidentimg: "./assets/images/President/english_chil.jpg",
+    Presidentimg: "src/public/assets/images/President/english_chil.jpg",
     President: "蔡英文",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E8%94%A1%E8%8B%B1%E6%96%87",
     getVotes: "57.13%",
@@ -18,18 +18,18 @@ const voteList = ref([
   },
 
   {
-    groupimg: "./assets/images/Party_emblem/b_chinesenationalistparty.png",
+    groupimg: "src/public/images/Party_emblem/b_chinesenationalistparty.png",
     group: "中國國民黨",
-    Presidentimg: "./assets/images/President/korea_fissh.jpg",
+    Presidentimg: "src/public/images/President/korea_fissh.jpg",
     President: "韓國瑜",
     wikipediaLink: "https://zh.wikipedia.org/wiki/%E9%9F%93%E5%9C%8B%E7%91%9C",
     getVotes: "38.61%",
     getVotesnumber: "5,522,119  票",
   },
   {
-    groupimg: "./assets/images/Party_emblem/or_peoplefirstarty.png",
+    groupimg: "src/public/images/Party_emblem/or_peoplefirstarty.png",
     group: "親民黨",
-    Presidentimg: "./assets/images/President/fish_chu.jpg",
+    Presidentimg: ".src/public/images/President/fish_chu.jpg",
     President: "宋楚瑜",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E5%AE%8B%E6%A5%9A%E7%91%9C",
     getVotes: "4.26%",
@@ -59,13 +59,13 @@ const voteList = ref([
               <div class="card_wrap">
                 <a :href="i.wikipediaLink" target="_blank" rel="noopener noreferrer">
                   <div class="card_title" :class="`bgcolor_${index}`">
-                    <img :src="require(`${i.groupimg}`)"/>
+                    <img :src="i.groupimg" alt="groupimg" />
 
                     <p class="label_body">{{ i.group }}</p>
                   </div>
 
                   
-                  <img :src="require(`/${i.Presidentimg}`) " alt="Presidentimg" />
+                  <img :src="i.Presidentimg" alt="Presidentimg" />
 
                   <div class="card_name label_body">{{ i.President }}</div>
 
