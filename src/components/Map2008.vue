@@ -6,7 +6,7 @@ const datalist = ref({});
 
 const getdata = async () => {
   try {
-    const result = await axios.get("/data/map2012.json");
+    const result = await axios.get("data/map2012.json");
 
     datalist.value = result.data.datas;
   } catch (error) {

@@ -5,9 +5,9 @@ import Nav from "../components/Nav.vue";
 
 const voteList = ref([
   {
-    groupimg: "src/assets/images/Party_emblem/g_progressiveparty.png",
+    groupimg: "images/Party_emblem/g_progressiveparty.png",
     group: "民主進步黨",
-    Presidentimg: "src/assets/images/President/english_chil.jpg",
+    Presidentimg: "/images/President/english_chil.jpg",
     President: "蔡英文",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E8%94%A1%E8%8B%B1%E6%96%87",
     getVotes: "56.12%",
@@ -15,18 +15,18 @@ const voteList = ref([
   },
 
   {
-    groupimg: "src/assets/images/Party_emblem/b_chinesenationalistparty.png",
+    groupimg: "images/Party_emblem/b_chinesenationalistparty.png",
     group: "中國國民黨",
-    Presidentimg: "src/assets/images/President/pig_loun.jpg",
+    Presidentimg: "/images/President/pig_loun.jpg",
     President: "朱立倫",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E6%9C%B1%E7%AB%8B%E5%80%AB",
     getVotes: "31.04%",
     getVotesnumber: "3,813,365  票",
   },
   {
-    groupimg: "src/assets/images/Party_emblem/or_peoplefirstarty.png",
+    groupimg: "images/Party_emblem/or_peoplefirstarty.png",
     group: "親民黨",
-    Presidentimg: "src/assets/images/President/fish_chu.jpg",
+    Presidentimg: "/images/President/fish_chu.jpg",
     President: "宋楚瑜",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E5%AE%8B%E6%A5%9A%E7%91%9C",
     getVotes: "12.83%",
