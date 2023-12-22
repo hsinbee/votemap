@@ -18,18 +18,18 @@ const voteList = ref([
   },
 
   {
-    groupimg: "/images/Party_emblem/b_chinesenationalistparty.png",
+    groupimg: "./assets/images/Party_emblem/b_chinesenationalistparty.png",
     group: "中國國民黨",
-    Presidentimg: "/images/President/korea_fissh.jpg",
+    Presidentimg: "./assets/images/President/korea_fissh.jpg",
     President: "韓國瑜",
     wikipediaLink: "https://zh.wikipedia.org/wiki/%E9%9F%93%E5%9C%8B%E7%91%9C",
     getVotes: "38.61%",
     getVotesnumber: "5,522,119  票",
   },
   {
-    groupimg: "../images/Party_emblem/or_peoplefirstarty.png",
+    groupimg: "./assets/images/Party_emblem/or_peoplefirstarty.png",
     group: "親民黨",
-    Presidentimg: "../images/President/fish_chu.jpg",
+    Presidentimg: "./assets/images/President/fish_chu.jpg",
     President: "宋楚瑜",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E5%AE%8B%E6%A5%9A%E7%91%9C",
     getVotes: "4.26%",
@@ -59,13 +59,14 @@ const voteList = ref([
               <div class="card_wrap">
                 <a :href="i.wikipediaLink" target="_blank" rel="noopener noreferrer">
                   <div class="card_title" :class="`bgcolor_${index}`">
-                    <img :src="require(`@/assets/images/${i.groupimg}`)" alt="groupimg" />
+                    <img :src="require(`${i.groupimg}`)"/>
 
                     <p class="label_body">{{ i.group }}</p>
                   </div>
 
-                  <img :src="require(`@/assets/images/${i.Presidentimg}`)" alt="Presidentimg" />
-        
+                  
+                  <img :src="require(`/${i.Presidentimg}`) " alt="Presidentimg" />
+
                   <div class="card_name label_body">{{ i.President }}</div>
 
                   <span class="card_footer label_footer" :class="`bgcolor_${index}`">{{
