@@ -8,9 +8,9 @@ import axios from "axios";
 
 const voteList = ref([
   {
-    groupimg: "/images/Party_emblem/g_progressiveparty.png",
+    groupimg: "../assets/images/Party_emblem/g_progressiveparty.png",
     group: "民主進步黨",
-    Presidentimg: "/images/President/english_chil.jpg",
+    Presidentimg: "../assets/images/President/english_chil.jpg",
     President: "蔡英文",
     wikipediaLink: "https://zh.wikipedia.org/zh-tw/%E8%94%A1%E8%8B%B1%E6%96%87",
     getVotes: "57.13%",
@@ -64,7 +64,7 @@ const voteList = ref([
                     <p class="label_body">{{ i.group }}</p>
                   </div>
 
-                  <img :src="i.Presidentimg" alt="Presidentimg" />
+                  <img :src="require(`/${i.Presidentimg}`)" alt="Presidentimg" />
 
                   <div class="card_name label_body">{{ i.President }}</div>
 

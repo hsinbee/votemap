@@ -70,7 +70,7 @@ const voteList = ref([
 
     <div class="enter_container" v-show="!showLoading">
       <div class="enter_title">
-        <img src="../assets/images/logo/circle_bear_logo.png" alt="circle_bear_logo" />
+        <img src="/votemap/images/logo/circle_bear_logo.png" alt="circle_bear_logo" />
 
         <h2 class="h2">台灣歷屆總統選舉 即時開票地圖</h2>
       </div>
@@ -79,7 +79,7 @@ const voteList = ref([
 
       <div class="card_container">
         <img
-          src="../assets/images/Party_emblem/bottom_icon_2020_2016.png"
+          src="/votemap/images/Party_emblem/bottom_icon_2020_2016.png"
           alt="group_b_g_o"
           class="custom-image"
         />
